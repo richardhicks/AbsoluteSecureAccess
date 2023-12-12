@@ -1,6 +1,6 @@
 <#PSScriptInfo
 
-.VERSION 1.1
+.VERSION 1.1.3
 
 .GUID a447d12a-8ab9-4365-898c-63c482d8c22a
 
@@ -9,6 +9,12 @@
 .COMPANYNAME Richard M. Hicks Consulting, Inc.
 
 .COPYRIGHT Copyright (C) 2023 Richard M. Hicks Consulting, Inc. All Rights Reserved.
+
+.LICENSE Licensed under the MIT License. See LICENSE file in the project root for full license information.
+
+.LICENSEURI https://github.com/richardhicks/AbsoluteSecureAccess/blob/main/LICENSE
+
+.PROJECTURI https://github.com/richardhicks/AbsoluteSecureAccess
 
 .TAGS AbsoluteSecureAccess
 
@@ -47,9 +53,9 @@
     https://directaccess.richardhicks.com/absolute-secure-access/
 
 .NOTES
-    Version:        1.1
+    Version:        1.1.3
     Creation Date:  August 2, 2023
-    Last Updated:   September 6, 2023
+    Last Updated:   December 8, 2023
     Author:         Richard Hicks
     Organization:   Richard M. Hicks Consulting, Inc.
     Contact:        rich@richardhicks.com
@@ -176,8 +182,8 @@ If ($ServerRole -eq 'BandwidthTestServer') {
 # SIG # Begin signature block
 # MIInGwYJKoZIhvcNAQcCoIInDDCCJwgCAQExCzAJBgUrDgMCGgUAMGkGCisGAQQB
 # gjcCAQSgWzBZMDQGCisGAQQBgjcCAR4wJgIDAQAABBAfzDtgWUsITrck0sYpfvNR
-# AgEAAgEAAgEAAgEAAgEAMCEwCQYFKw4DAhoFAAQUDAWCxVp98R8n1rWh1AoZU5Ck
-# enqggiDDMIIFjTCCBHWgAwIBAgIQDpsYjvnQLefv21DiCEAYWjANBgkqhkiG9w0B
+# AgEAAgEAAgEAAgEAAgEAMCEwCQYFKw4DAhoFAAQUM8r/kzRArb6lXD6J8TztuVCM
+# PRaggiDDMIIFjTCCBHWgAwIBAgIQDpsYjvnQLefv21DiCEAYWjANBgkqhkiG9w0B
 # AQwFADBlMQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMRkwFwYD
 # VQQLExB3d3cuZGlnaWNlcnQuY29tMSQwIgYDVQQDExtEaWdpQ2VydCBBc3N1cmVk
 # IElEIFJvb3QgQ0EwHhcNMjIwODAxMDAwMDAwWhcNMzExMTA5MjM1OTU5WjBiMQsw
@@ -357,30 +363,30 @@ If ($ServerRole -eq 'BandwidthTestServer') {
 # NiBTSEEzODQgMjAyMSBDQTECEAFmchIElUK4sup54tMHrEQwCQYFKw4DAhoFAKB4
 # MBgGCisGAQQBgjcCAQwxCjAIoAKAAKECgAAwGQYJKoZIhvcNAQkDMQwGCisGAQQB
 # gjcCAQQwHAYKKwYBBAGCNwIBCzEOMAwGCisGAQQBgjcCARUwIwYJKoZIhvcNAQkE
-# MRYEFLtKRHFLStngwGgExJVtdC/pbk+TMA0GCSqGSIb3DQEBAQUABIIBgBeMQN2/
-# W5wLPUXJQrc9H5603GsEhzXGmqN8YOyRlFwaYWEASNtfBYf3MzSIKwYULw2yjxc2
-# mwIuRqsJZXxGl8KH7rQHNjRHhPGeRXIBQpTTn10X8UpZ8ayjeikqBg8qTClvujnL
-# oMr0hQ4e6/gmL2eWR8t97huFGtH4YWu3lw+fAQRT1rR4zNCQihCtu1rvPhOxxMry
-# +AiC2WX/3mPPU6SSWERA2RkAy7L5w/+CtNd0YSQdWfj1cqYNa6uDLjYxHJhs2yBs
-# Q0K/oiuTxlrrjqfySl4qt/Rz6aYCrtHVc6q1EtP5oksyjbgLH/ZklFiaf3h06FGr
-# hCT3nLXmkl71D4lausYXcmSiMsmWwfq2pV1zTvuD9JdTieP6yaAmDYgJovvuDaVA
-# OoHD1ivp6QyaAnlT3Fp8upHVNndqJipOpMhwn16LWjh6CRqIWxDNlgW2rwtOlGw3
-# ygweTwZnJVzmYWa5oBWLXDW67BXDhCTR0RH63GBBD3+Wll4nvmKKtnSLL6GCAyAw
+# MRYEFEKGZt4E9ocClAc+ASV9WGrm3yxfMA0GCSqGSIb3DQEBAQUABIIBgDeiLSty
+# CvvMzoOyL5qDdOTGGNQqPgAuK8oU1VZ1BRliLNKXOD409QpV2CHTa9iMaHKPvdJC
+# yGpadehygaGnjPkPBFag8o34ssu4kF5gbfpOH+RC81XYhs1VsdMTJqD2nZkxOVc/
+# VkkZ3k1fOnt70MaMud+L1gzhkakzoTVegVcvokXO7AepXZhrdj5x+04NL+zGclAx
+# 7NkV1CsgWfQqJ/DdJf2rIymTKrynlcL9Eio63BO/T03GLOGmuj5p4etGyXJERFBX
+# zL0HQKZN2d2u3b3OgYb5NZY8z1sRgdNnMI6kKIs2U6vKhouNJvK3UU5IQJpuq+3G
+# IZF3WFz7ZUjh4/udUlwmljK2GQyv0o7wr+iH3HQRhvuWXxk6XaATK6AsyQE0lman
+# iqc3PskoUd8gf6rLg+Hz5hjXjZ404FpHTyZHQW3PGb76bGUE42YsuEAjIbAuX92i
+# xOb4EVmDPUqf1ijeNt3OhjtSaQxohv62rHwc571q75pOn05BXumewmNgU6GCAyAw
 # ggMcBgkqhkiG9w0BCQYxggMNMIIDCQIBATB3MGMxCzAJBgNVBAYTAlVTMRcwFQYD
 # VQQKEw5EaWdpQ2VydCwgSW5jLjE7MDkGA1UEAxMyRGlnaUNlcnQgVHJ1c3RlZCBH
 # NCBSU0E0MDk2IFNIQTI1NiBUaW1lU3RhbXBpbmcgQ0ECEAVEr/OUnQg5pr/bP1/l
 # YRYwDQYJYIZIAWUDBAIBBQCgaTAYBgkqhkiG9w0BCQMxCwYJKoZIhvcNAQcBMBwG
-# CSqGSIb3DQEJBTEPFw0yMzA5MDYyMTAwNDlaMC8GCSqGSIb3DQEJBDEiBCBKDlVd
-# /DLM0EpBOIKuGOmQhj6+MdsfwGjIumyAQxz/kjANBgkqhkiG9w0BAQEFAASCAgBf
-# 7im21HHVmlsZvUa384ZFScyMoD+iBwZb6lGKmLeAj7pDrAzj3Jpn3t2OqU7md7+b
-# sf+ir7XNuUv8Fp5grCMWc2eJUHLWY254C1NzD+eXv8w0D+66j150/ElDfiIJYIDu
-# G+E6iE+HjqOuEyU3Ftjc1uCHJnKAdswLJTwb9xy8MNr7oMrhI9q0Fif/ja5jcrN7
-# eYoAFXjKMIQM+uD/vBV6SChgm69W8mpG4CRHUZ0JILHYiotXG5UU2VdVNIJGn1Xs
-# gOOEFRxwmpW4CCX94AfXQtcv7UwQI1WhTb+RYz/nWIhJIb8y42RQAjtMfiMCx1eZ
-# MC5p6TtykqI4gpO1TfPt6qDRoTIjSwzOjSGwUd9YM6Kx7iovCUzmuXkYNeoWibXA
-# WycTgW+gCBFN1qevZDVhQOr1q9loAS/hbBHFFWosyBTjJtMANqO7kwTKc77Xyjmc
-# yWlavGicrJGQGbmnic1EuS305DrNO2vKbN50uFDlLYu6bALf8hEg0CcWayL7OirV
-# 9yjOu+e2ND7mR96fZLYXgXDWcwAyfnyU8VlF2ydQ2Cf6HC4AjvfitHjMiUNhwDg6
-# 2dHsoMzSw4d6eCczUZkg/nlkuGFHc+SNqyiXFD2jl6889dZ4WlJ2ljbnOUEvXBg6
-# qRFLv2wjhSRbDlJrp3cFcvAr5hmM2nqBPD0Baq7ruA==
+# CSqGSIb3DQEJBTEPFw0yMzEyMTIxNzQ5NDNaMC8GCSqGSIb3DQEJBDEiBCBbPJ1+
+# MN+qgbMCeZACL2QeD53wMsFTWRfgdKBBWTK3/jANBgkqhkiG9w0BAQEFAASCAgAv
+# do6TavQ6foCLENvH5SD888lJTklIbp8VC4YmanPv0RE9RFXGsjsQWsjUFgnRbkMF
+# T4ipdlQ2GBzbgg//D693qyfI3DsYfMcFiu58cQdw/EGj3XTVywnOX+hBAEYAEk9n
+# ASca6Q+K55pYjyA1ZfPSXBqRdGj5VGUE/8AIxbt3ZTWEJTo3lnpbp+XjsNX2+s5t
+# NRcfDhLkJ6uV/UyX38r2IC6Ese7htYGL42VzhZHerZfysIYZLleIu4SiDpj3dmKr
+# MaP1ydIJY2KHiCU/2mU1gj6RymNfIC4Ny+Hjj8KD1oa8SAjNA6AW/cJbhTh3XpYh
+# RvWq1WpU7zzuCDmV9HbfoaggdD8T96BjNHPD+8ZG+bd9iuasb/cVtBwHMJwW3nAf
+# nPB2QroBajY8iQs1A350Tif3GtMFVTMsJisH7lXKbmGfc+mDZFN4AeKFgLcXD7th
+# eSJVdTFBJ+5Bl3GAaiNn8aTF4AWHz27uB5ViBsxUXwzjZYG00Moyz15D7qPWt5D5
+# lkup981YHQKqF7XDJZKJrv4IREm7Jy4TAlV3OxrW1FG9yBix+eB2t+oeIAuUwN7r
+# wLmVsMMvKYYJzjMANNUYDdrjrSouvLUxUMWVoUB8/hWHxfRMuprdLuGdrCVUdNNk
+# KlKTufR4/lP1YXG/gjfJbTSfw6qLtoMW6/sKODFARA==
 # SIG # End signature block
